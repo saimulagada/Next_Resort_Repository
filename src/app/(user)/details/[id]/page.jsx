@@ -15,7 +15,7 @@ const DynamicProduct = () => {
     console.log("dynamic id",id)
 
     const DynamicProductHandler = async () => {
-        const resp = await fetch(`http://localhost:3000/api/admin/product/${id}`)
+        const resp = await fetch(`https://next-resort-repository.vercel.app/api/admin/product/${id}`)
         const newData = await resp.json()
         console.log("dynamic data",newData)
         setRecord(newData.data)

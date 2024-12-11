@@ -8,7 +8,7 @@ const ProductCollection = () => {
     const [collection,setCollection] = useState("")
 
     const collectionHandler = async () => {
-        const resp = await fetch(`http://localhost:3000/api/admin/add-product`)
+        const resp = await fetch(`https://next-resort-repository-pra9.vercel.app/api/admin/add-product`)
         const newData = await resp.json()
         console.log("product data",newData)
         setCollection(newData.data)

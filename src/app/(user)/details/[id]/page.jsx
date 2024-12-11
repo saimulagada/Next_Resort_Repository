@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { useParams } from 'next/navigation'
 import UserNavigation from '@/app/components/UserNavigation'
 import Link from 'next/link'
@@ -14,16 +14,16 @@ const DynamicProduct = () => {
     const {id} = params
     console.log("dynamic id",id)
 
-    const DynamicProductHandler = async () => {
-        const resp = await fetch(`http://localhost:3000/api/admin/product/${id}`)
-        const newData = await resp.json()
-        console.log("dynamic data",newData)
-        setRecord(newData.data)
-    }
+    const DynamicProductHandler = useCallback(async () => {
+      const resp = await fetch(`http://localhost:3000/api/admin/product/${id}`);
+      const newData = await resp.json();
+      console.log("dynamic data", newData);
+      setRecord(newData.data);
+  }, [id]); 
 
-    useEffect(() => {
-        DynamicProductHandler()
-    },[])
+  useEffect(() => {
+      DynamicProductHandler();
+  }, [DynamicProductHandler]);
 
     const BookingHandler = async () => {
       if(!selectedDates) {

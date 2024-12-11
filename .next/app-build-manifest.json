@@ -16,6 +16,17 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/admin/add-product/route.js"
+    ],
+    "/(user)/details/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(user)/details/[id]/page.css",
+      "static/chunks/app/(user)/details/[id]/page.js"
+    ],
+    "/api/admin/product/[id]/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/admin/product/[id]/route.js"
     ]
   }
 }

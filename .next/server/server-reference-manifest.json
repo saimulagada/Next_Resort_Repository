@@ -10,6 +10,17 @@
       "layer": {
         "app/page": "action-browser"
       }
+    },
+    "405e8852c4e6625d52de03ac587d7fbf83d15d1a21": {
+      "workers": {
+        "app/(user)/details/[id]/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csaist%5C%5COneDrive%5C%5CDesktop%5C%5CAll%20Folders%5C%5Cnext%5C%5CNextResort%5C%5Cnext-resort%5C%5Csrc%5C%5Capp%5C%5CserverActions%5C%5CbookingAction.js%22%2C%5B%5B%22405e8852c4e6625d52de03ac587d7fbf83d15d1a21%22%2C%22bookingAction%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(user)/details/[id]/page": "action-browser"
+      }
     }
   },
   "edge": {},
